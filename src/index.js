@@ -1,7 +1,7 @@
 import { openAsBlob } from "node:fs";
 import { MoleculeStream } from "./MoleculeStream.js";
-//import { getBetterDB as getDB } from "./db/getBetterDB.js";
-import { getNativeDB as getDB } from "./db/getNativeDB.js";
+import { getBetterDB as getDB } from "./db/getBetterDB.js";
+//import { getNativeDB as getDB } from "./db/getNativeDB.js";
 import { insertMolecule } from "./db/insertMolecule.js";
 const blob = await openAsBlob(new URL("../data.sdf.gz", import.meta.url));
 

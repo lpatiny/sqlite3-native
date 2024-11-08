@@ -12,6 +12,7 @@ export function getNativeDB() {
   const dbPath = getDBPathAndDeleteExisting();
   const db = new DatabaseSync(dbPath);
   db.exec("PRAGMA journal_mode = WAL");
+  db.exec("PRAGMA synchronous=NORMAL");
   prepareDB(db);
   return db;
 }
